@@ -12,7 +12,7 @@ public class App {
 		
 		//input.close();
 		
-		Scanner input2 = new Scanner(System.in);
+		Scanner input2 = new Scanner(System.in);  
 		System.out.println("Enter floating point value: ");	
 		
 		float floatVal = input2.nextFloat();

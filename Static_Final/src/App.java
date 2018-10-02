@@ -5,13 +5,13 @@ class Thing {
 	public String name;
 	public static String description;
 
-	private static int count = 0;
+	public static int count = 0;
 	
-	private int id = 0;
+	public int id = 0;
 
 	public Thing() {
-		id = getCount();
-		setCount(getCount() + 1);
+		id = count;
+		count++;
 	}
 
 	public void showName() {
@@ -20,14 +20,6 @@ class Thing {
 
 	public static void showInfo() {
 		System.out.println(description);
-	}
-
-	public static int getCount() {
-		return count;
-	}
-
-	public static void setCount(int count) {
-		Thing.count = count;
 	}
 }
 
@@ -39,11 +31,11 @@ public class App {
 		// System.out.println(Thing.description);
 
 		Thing.showInfo();
-		System.out.println("Before creating objects, count is: " + Thing.getCount());
+		System.out.println("Before creating objects, count is: " + Thing.count);
 
 		Thing thing1 = new Thing();
 		Thing thing2 = new Thing();
-		System.out.println("After creating objects, count is: " + Thing.getCount());
+		System.out.println("After creating objects, count is: " + Thing.count);
 
 		thing1.name = "Bob";
 		thing2.name = "Sue";

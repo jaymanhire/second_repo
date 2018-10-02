@@ -1,8 +1,17 @@
 import java.util.Scanner;
 
+class Jay {
+	public int mathApp(int x) {
+		return x;
+	}
+}
+
 public class App {
 
 	public static void main(String[] args) {
+		
+		Jay j = new Jay();
+		System.out.println(j.mathApp(655));
 
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter a command: ");

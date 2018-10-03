@@ -32,7 +32,7 @@ public class App {
 			System.out.printf("%-2d: Some text\n", i);
 		}
 		
-		System.out.printf("Total Value: %12.3f", 9879.321585);
+		System.out.printf("Total Value: %12.5f", 9879.321585);
 		
 		
 		

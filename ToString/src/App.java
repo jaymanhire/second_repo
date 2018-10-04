@@ -9,12 +9,12 @@ class Frog {
 	}
 
 	public String toString() {
-		return String.format("%-4d: %s", id, name);
-		/*
+		//return String.format("%-4d: %s", id, name);
+		
 		StringBuilder sb = new StringBuilder();
 		sb.append(id).append(": ").append(name);
 		
-		return sb.toString();*/
+		return sb.toString();
 	}
 
 }

@@ -32,6 +32,8 @@ public class App {
 		System.out.println(p1.getName());
 		System.out.println(p1.getData());
 		System.out.println(Plant.ID);
+		p1.setName("Billy Goodshoes");
+		System.out.println(p1.getName());
 
 	}
 

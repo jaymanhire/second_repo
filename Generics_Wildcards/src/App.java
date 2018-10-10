@@ -6,12 +6,20 @@ class Machine {
 		return "I am a machine";
 	}
 
+	public void start() {
+		System.out.println("Machine started.");
+	}
+
 }
 
 class Camera extends Machine {
 	@Override
 	public String toString() {
 		return "I am a camera";
+	}
+
+	public void snap() {
+		System.out.println("snap!");
 	}
 }
 
@@ -27,12 +35,21 @@ public class App {
 		list2.add(new Camera());
 		list2.add(new Camera());
 
-		showList(list1);
+		showList(list2);
+		showList2(list1);
 	}
 
-	public static void showList(ArrayList<?> listy) {
+	public static void showList(ArrayList<? extends Machine> listy) {
+		for (Machine value : listy) {
+			System.out.println(value);
+			value.start();
+		}
+	}
+
+	public static void showList2(ArrayList<? super Camera> listy) {
 		for (Object value : listy) {
 			System.out.println(value);
+
 		}
 	}
 }

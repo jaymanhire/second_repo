@@ -9,11 +9,11 @@ public class App {
 	}
 
 	private static int factorial(int value) {
-		//System.out.println(value);
 
 		if (value == 1) {
 			return 1;
+		} else {
+			return factorial(value - 1) * value;
 		}
-		return factorial(value - 1) * value;
 	}
 }

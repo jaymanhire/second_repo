@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -42,8 +43,14 @@ public class App {
 		}*/
 		
 		// Add items elsewhere in the list
-		for (int i = 0; i < 1E5; i++) {
+		/*for (int i = 0; i < 1E5; i++) {
 			list.add(list.size() - 1000, i); // note the arg list here
+		}*/
+		
+		Iterator<Integer> it = list.iterator();
+		while(it.hasNext()) {
+			int value = it.next();
+			System.out.println(value);
 		}
 
 		long end = System.currentTimeMillis();

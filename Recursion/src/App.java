@@ -1,10 +1,12 @@
 
 public class App {
 
+	
+
 	public static void main(String[] args) {
 		// e.g. 4! = 4*3*2*1()
 
-		System.out.println(factorial(6));
+		System.out.println(factorial(11));
 
 	}
 
@@ -13,7 +15,10 @@ public class App {
 		if (value == 1) {
 			return 1;
 		} else {
+
 			return factorial(value - 1) * value;
+
 		}
+
 	}
 }

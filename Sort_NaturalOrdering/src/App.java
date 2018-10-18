@@ -14,9 +14,11 @@ class Person implements Comparable<Person> {
 
 	public String toString() {
 		return name;
-	}	
+	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -27,7 +29,9 @@ class Person implements Comparable<Person> {
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -48,8 +52,19 @@ class Person implements Comparable<Person> {
 	}
 
 	@Override
-	public int compareTo(Person person) {		
-		return -name.compareTo(person.name);
+	public int compareTo(Person person) {
+		// return -name.compareTo(person.name);
+		int len1 = name.length(); 
+		int len2 = person.name.length();
+		if (len1 > len2) {
+			return 1;
+		} else if (len1 < len2) {
+			return -1;
+		} else {			//removes dups when comparing length
+			//return 0;
+			return name.compareTo(person.name);
+
+		}
 	}
 }
 
@@ -58,7 +73,8 @@ public class App {
 	public static void main(String[] args) {
 
 		List<Person> list = new ArrayList<Person>();
-		SortedSet<Person> set = new TreeSet<Person>(); // TreeSets Sorted automatically
+		SortedSet<Person> set = new TreeSet<Person>(); // TreeSets Sorted automatically //removes dups when comparing
+														// length
 
 		addElements(list);
 		addElements(set);
@@ -72,11 +88,11 @@ public class App {
 	}
 
 	private static void addElements(Collection<Person> col) {
-		col.add(new Person ("Joe"));
-		col.add(new Person ("Sue"));
-		col.add(new Person ("Juliet"));
-		col.add(new Person ("Clare"));
-		col.add(new Person ("Mike"));
+		col.add(new Person("Joe"));
+		col.add(new Person("Sue"));
+		col.add(new Person("Juliet"));
+		col.add(new Person("Clare"));
+		col.add(new Person("Mike"));
 	}
 
 	private static void showElements(Collection<Person> col) {

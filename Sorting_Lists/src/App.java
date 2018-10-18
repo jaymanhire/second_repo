@@ -3,6 +3,35 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+class Person {
+	private int id;
+	private String name;
+
+	public Person(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String toString() {
+		return id + ": " + name;
+	}
+}
+
 class StrLenCompare implements Comparator<String> {
 
 	@Override
@@ -24,15 +53,17 @@ class ReverseAlphaOrder implements Comparator<String> {
 
 	@Override
 	public int compare(String s1, String s2) {
-		
+
 		return -s1.compareTo(s2);
 	}
-	
+
 }
 
 public class App {
 
 	public static void main(String[] args) {
+
+		// Sorting Strings
 
 		ArrayList<String> animals = new ArrayList<String>();
 
@@ -50,6 +81,7 @@ public class App {
 			System.out.println(anims);
 		}
 
+		// Sorting Numbers
 		List<Integer> numbers = new ArrayList<>();
 
 		numbers.add(3);
@@ -58,11 +90,58 @@ public class App {
 		numbers.add(40);
 		numbers.add(1);
 
-		Collections.sort(numbers);
+		Collections.sort(numbers, new Comparator<Integer>() {
+			@Override
+			public int compare(Integer num1, Integer num2) {
+				return -num1.compareTo(num2);
+			}
+
+		});
 
 		for (Integer ints : numbers) {
 			System.out.println(ints);
 		}
+		
+		// Sorting Arbitrary Objects
+		List<Person> people = new ArrayList<Person>();  // ArrayList of Person objects
+		
+		people.add(new Person(1, "Joe"));
+		people.add(new Person(3, "Bob"));
+		people.add(new Person(4, "Clare"));
+		people.add(new Person(2, "Sue"));
+		
+		// Sort in order of id
+		Collections.sort(people, new Comparator<Person>() {
+			@Override
+			public int compare(Person p1, Person p2) {
+				if (p1.getId() > p2.getId()) {
+					return 1;
+				} else if (p1.getId() < p2.getId()) {
+					return -1;
+				} else
+					return 0;
+			}
+
+		});
+		
+		for(Person person: people) {
+			System.out.println(person);
+		}
+		System.out.println();
+		
+		// Sort in order of name
+				Collections.sort(people, new Comparator<Person>() {
+					@Override
+					public int compare(Person p1, Person p2) {
+						return p1.getName().compareTo(p2.getName());
+					}
+
+				});
+				
+				for(Person person: people) {
+					System.out.println(person);
+				}
+		
 
 	}
 

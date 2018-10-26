@@ -28,7 +28,7 @@ class Worker extends Thread {
 		for (int i = 0; i < 100; i++) {
 			System.out.println(Thread.currentThread().getName() + " got value: " + sequence.getNext());
 			try {
-				Thread.sleep(0);
+				Thread.sleep(80);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

@@ -21,6 +21,10 @@ public class Car {
 		this.paintColor = newPaintColor;
 	}
 
+	public double speedingUp(double currentSpeed) {
+		return currentSpeed += 100;
+	}
+
 	public String toString() {
 		String output = "~~~~~~~~~~~~~~~~" + "\n";
 		output += "MPG: " + averageMilesPerGallon + "\n";

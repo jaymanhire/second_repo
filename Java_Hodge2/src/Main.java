@@ -19,7 +19,10 @@ public class Main {
 		car1.changePaintColor(Color.RED);
 		System.out.println("car1 color: " + car1.paintColor);
 		
+		double myCarSpeed = 50;
+		car1.speedingUp(myCarSpeed);
 		
+		System.out.println("New speed: " +  car1.speedingUp(myCarSpeed));
 
 	}
 

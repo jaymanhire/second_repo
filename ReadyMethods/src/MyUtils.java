@@ -5,7 +5,7 @@ public class MyUtils {
 		int result = myNum + 10;
 		return result;
 	}
-	public static int printSomeJunk(int number) {
+	protected static int printSomeJunk(int number) {
 		int result = number;
 		return result;
 	}

@@ -3,9 +3,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Answerable phone = () -> {
-			return "Hello";
-		};
+		Answerable phone = () -> "Hello";
 
 		System.out.println(phone.answer());
 

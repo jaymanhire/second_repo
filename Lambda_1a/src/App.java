@@ -9,6 +9,9 @@ public class App {
 
 		Predicate isOdd = n -> n % 2 != 0;
 		System.out.println(isOdd.test(6));
-	}
 
+		Predicate isEven = n -> n % 2 == 0;
+		System.out.println(isEven.test(14));
+
+	}
 }

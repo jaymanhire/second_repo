@@ -1,5 +1,5 @@
 
-public class Animal {
+public abstract class Animal {
 
 	int age;
 	int weightInLbs;
@@ -31,5 +31,8 @@ public class Animal {
 		System.out.println("Animal weight: " + weightInLbs);
 		System.out.println("Gender: " + gender);
 	}
+	public abstract void move();
+		
+	
 
 }

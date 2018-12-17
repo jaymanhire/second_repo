@@ -10,8 +10,6 @@ public class Bird extends Animal {
 		System.out.println("Bird No argument constructor running.");
 	}
 
-	public void fly() {
-		System.out.println("Bird Flying...");
-	}
+	
 
 }

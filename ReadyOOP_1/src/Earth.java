@@ -1,32 +1,14 @@
 
 public class Earth {
-	
+
 	public static void main(String[] args) {
-		
-		Human tom;
-		tom = new Human();
-		
-		tom.name = "Tom Johnson";
-		tom.age = 45;
-		tom.eyeColor = "blue";
-		tom.heightInInches = 70;
-		tom.speak();
-		tom.eat();
-		
-		
-		System.out.println();
-		
-		Human joe = new Human();
-		joe.age = 65;
-		joe.eyeColor = "brown";
-		joe.heightInInches = 72;
-		joe.name = "Joe Brown";
-		joe.speak();
-		joe.eat();
-		
-		
-		
-		
+
+		Human human1 = new Human("Tom", 25, 75, "blue");
+		Human human2 = new Human("Joe", 28, 68, "green");
+
+		human1.speak();
+		human2.speak();
+
 	}
 
 }

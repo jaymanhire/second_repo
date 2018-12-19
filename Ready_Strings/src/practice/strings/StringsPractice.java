@@ -23,7 +23,7 @@ public class StringsPractice {
 		System.out.println();
 		
 		int a2 = ab.indexOf("there");		
-		System.out.println(a2);
+		System.out.println("a2: " + a2);
 		
 		if(a == b) {
 			System.out.println("Do not use this.");

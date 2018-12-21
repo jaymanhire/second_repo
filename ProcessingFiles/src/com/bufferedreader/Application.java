@@ -11,11 +11,8 @@ public class Application {
 	public static void main(String[] args) {
 
 		File file = new File("/home/jlm/git/second_repo/ProcessingFiles/src/com/bufferedreader/myBufferdFile.txt");
-		FileReader fr = null;
-		BufferedReader br = null;
-		try {
-			fr = new FileReader(file);
-			br = new BufferedReader(fr);
+
+		try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr);) {
 
 			String line = br.readLine();
 			while (line != null) {
@@ -28,17 +25,7 @@ public class Application {
 		} catch (IOException e) {
 			System.out.println("Problem reading file. Please check file name: " + file.getName());
 
-		} finally {
-			try {
-				br.close();
-				fr.close();
-			} catch (IOException e) {
-				System.out.println("Unable to close file. Please check file name: " + file.getName());
-			} catch (NullPointerException np) {
-				System.out.println("File probably never opened. " + file + " " + np + "\nPlease check file name.");
-			}
 		}
-
 	}
 
 }

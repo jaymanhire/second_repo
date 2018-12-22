@@ -1,6 +1,7 @@
 package com.hashset.methods;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -19,22 +20,11 @@ public class App {
 		hashSet.add(10);
 		hashSet.add(10);
 
-		List<Integer> li = new ArrayList<Integer>(hashSet);  // pass in another list
-
-		ArrayList<Integer> newList = new ArrayList<>();
-		newList.add(10);
-		newList.add(67);
-		newList.add(15);
-
-		// boolean hasValue = list1.contains(67);
-		// list1.clear();
-		// boolean isEmpty = list1.isEmpty();
-		hashSet.retainAll(newList);
-
-		// list1.addAll(newList);
-		// list1.removeAll(newList);
-
-		System.out.println(hashSet);
+		// Convert hashset into arraylist
+		ArrayList<Integer> myList = new ArrayList<>(hashSet);
+		// Collections.sort(hashSet); //will not work, sort does not accept hashset, only List
+		Collections.sort(myList);
+		System.out.println(myList);
 
 	}
 

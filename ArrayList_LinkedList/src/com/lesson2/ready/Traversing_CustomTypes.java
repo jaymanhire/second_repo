@@ -41,6 +41,7 @@ public class Traversing_CustomTypes {
 		 * for (Vehicle car : vehicles) { System.out.println(car.getMake());
 		 * System.out.println(car.getModel()); }
 		 */
+		System.out.println("\nPrint both Lists with a static method:\n");
 		printElements(vehicles);
 		printElements(animals);
 		

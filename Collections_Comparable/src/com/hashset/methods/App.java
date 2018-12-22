@@ -9,21 +9,17 @@ public class App {
 
 	public static void main(String[] args) {
 
-		HashSet<Integer> hashSet = new HashSet<>();
-		hashSet.add(12);
-		hashSet.add(43);
-		hashSet.add(15);
-		hashSet.add(67);
-		hashSet.add(43);
-		hashSet.add(10);
-		hashSet.add(10);
-		hashSet.add(10);
-		hashSet.add(10);
+		HashSet<String> hashSet = new HashSet<>();
+		hashSet.add("Random");
+		hashSet.add("Tooth Brush");
+		hashSet.add("Computer");
+		hashSet.add("Cloths");
+		
 
 		// Convert hashset into arraylist
-		ArrayList<Integer> myList = new ArrayList<>(hashSet);
+		ArrayList<String> myList = new ArrayList<>(hashSet);
 		// Collections.sort(hashSet); //will not work, sort does not accept hashset, only List
-		Collections.sort(myList);
+		Collections.sort(myList);  // Natural Ordering
 		System.out.println(myList);
 
 	}

@@ -1,5 +1,5 @@
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class App {
 
@@ -7,12 +7,14 @@ public class App {
 
 		// LinkedHashMap preserves the order of insertion.
 
-		HashMap<String, String> dictionary = new HashMap<>();
+		TreeMap<String, String> dictionary = new TreeMap<>();
 
 		dictionary.put("Brave", "Ready to face danger.");
 		dictionary.put("Billiant", "Exceptionally clever or talented.");
 		dictionary.put("Joy", "A feeling of great pleasure and happiness");
 		dictionary.put("Confidence", "The state of feeling certain about the truth of something.");
+		
+		dictionary.put("Billiant", "jjjjjjjjjjjjjjjjjjjjjjjj.");    // No duplicates
 
 		// for(String word: dictionary.keySet()) {
 		// System.out.println(dictionary.get(word));
@@ -24,6 +26,7 @@ public class App {
 			System.out.print(entry.getKey() + ": ");
 			System.out.println(entry.getValue());
 		}
+
 
 	}
 

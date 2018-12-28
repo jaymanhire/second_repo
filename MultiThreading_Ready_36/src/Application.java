@@ -12,7 +12,7 @@ public class Application {
 				for (int i = 0; i < 1000; i++) {
 					System.out.println("number: " + i + " - " + Thread.currentThread().getName());
 					try {
-						Thread.sleep(10);
+						Thread.sleep(1);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -32,7 +32,7 @@ public class Application {
 				for (int i = 0; i < 1000; i++) {
 					System.out.println("number: " + i + " - " + Thread.currentThread().getName());
 					try {
-						Thread.sleep(10);
+						Thread.sleep(1);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -49,17 +49,17 @@ public class Application {
 
 class Task implements Runnable {
 
-	private String name;
+	//private String name;
 
-	public Task(String name) {
+	/*public Task(String name) {
 		this.name = name;
-	}
+	}*/
 
 	public void run() {
 		for (int i = 0; i < 1000; i++) {
 			System.out.println("number: " + i + " - " + Thread.currentThread().getName());
 			try {
-				Thread.sleep(10);
+				Thread.sleep(1);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

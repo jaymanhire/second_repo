@@ -1,5 +1,7 @@
 
 public class PerformanceStage {
+	
+	// "PerformanceStage" is the Singleton
 
 	private static PerformanceStage INSTANCE = null;
 	
